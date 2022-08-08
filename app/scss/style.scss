@@ -1,0 +1,359 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+/*--------------------------------header--------------------*/
+.header__menu-item--top{
+  display: none;
+}
+.header{
+  position: relative;
+  &__inner{
+    position: relative;
+    // z-index: 4;
+    padding: 75px 0 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu-list{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+  }
+  &__menu-item{
+    margin-left: 30px;
+  }
+  &__menu-link{
+    font-weight: 500;
+    font-size: 24px;
+    transition: all 0.5s;
+    &:hover{
+      border-bottom: 1px solid #000;
+    }
+  }
+  &__menu-link--number{
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/header/phone.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      height: 28px;
+      width: 25px;
+    }
+  }
+  .logo__img{
+    border: 1px solid #000;
+    padding: 40px 60px 35px 60px;
+  }
+}
+/*----------------description------------------------*/
+.description{
+  padding-bottom: 80px;
+  border-bottom: 1px solid #000;
+  position: relative;
+  &__bg--rigth{
+    background-color: $green;
+    position: absolute;
+    width: 50%;
+    height: 150%;
+    bottom: 80px;
+    right: 0;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__title{
+    padding: 40px 35px;
+    margin-bottom: 245px;
+  }
+  &__text{
+    font-style: normal;
+    max-width: 520px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: normal;
+    border: 1px solid #000;
+    padding: 48px;
+  }
+  &__img{
+    width: 450px;
+    height: 550px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+  }
+} 
+/*----------------------catalog----------------------*/
+.catalog{
+  padding: 80px 0;
+  border-bottom: 1px solid #000;
+  &__title{
+    display: block;
+    padding: 40px 145px;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 125px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__items-flower{
+    display: grid;
+    grid-template-columns: repeat(5, 190px);
+    grid-template-rows: repeat(2, 280px);
+    column-gap: 35px;
+    row-gap: 110px;
+    margin-bottom: 135px;
+  }
+
+}
+.item__flower{
+  border: 1px solid #000;
+  padding: 25px 15px 15px 15px;
+  background-color: $green;
+  transition: all 0.3s;
+    &:hover{
+      background-color: #d2e2ca;
+  }
+}
+.name__flower{
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 45px;
+  transition: all 0.3s;
+}
+.catalog__text{
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 65px;
+}
+.catalog__items-tulip{
+  display: grid;
+  grid-template-rows: repeat(3, 190px);
+  grid-template-columns: repeat(5, 190px);
+  row-gap: 35px;
+  column-gap: 35px;
+}
+.item__tulip{
+  border: 1px solid #000;
+  padding: 15px;
+  background-color: $green;
+  transition: all 0.3s;
+  &:hover{
+    background-color: #d2e2ca;
+  }
+}
+.mfp-counter{
+  color: transparent;
+}
+.item__flower--needles-block,
+.item__flower--chrysanthemum-dlock{
+  display: none;
+}
+
+/*---------------------abotus----------------------------*/
+.aboutus{
+  padding: 80px 0;
+  position: relative;
+  border-bottom: 1px solid #000;
+  &__bg--left{
+    position: absolute;
+    background-color: $green;
+    top: 80px;
+    left: 0;
+    width: 40%;
+    height: 85%;
+    border: 1px solid #000;
+  }
+  &__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__video{
+    margin-top: 14%;
+    // position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      opacity: 0.5;
+      border-radius: 50%;
+      bottom: 50%;
+      transform: translateY(50%);
+      left: 132px;
+    }
+    // &::before{
+      // content: '';
+      // position: absolute;
+      // background-image: url('../images/aboutus/play.svg');
+      // width: 30px;
+      // height: 35px;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(120%, -50%) rotate(90deg);
+      // // transform: rotate(90deg);
+      // z-index: 3;
+      // display: none;
+    // }
+  }
+  &__video-img{
+    width: 375px;
+    height: 550px;
+  }
+  &__video-btn{
+    position: absolute;
+    background-image: url('../images/aboutus/play.svg');
+    width: 30px;
+    height: 35px;
+    bottom: 50%;
+    left: 170px;
+    z-index: 3;
+    transform: translateY(50%);
+    bottom: 50%;
+  }
+  &__title{
+      padding: 35px 95px;
+      margin-bottom: 160px;
+  }
+  &__item{
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+  }
+  &__text{
+    max-width: 510px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: normal;
+  }
+  &__text:not(:last-child){
+    margin-bottom: 20px;
+  }
+  &__slogan{
+    border: 1px solid #000;
+    padding: 15px 20px;
+    font-weight: 400;
+    font-size: 22px;
+    margin-right: 50px;
+  }
+}
+/*-----------------contacts-----------------------*/
+.contacts{
+  padding: 80px 0;
+  border-bottom: 1px solid #000;
+  position: relative;
+  &__bg--right{
+    position: absolute;
+    background-color: $green;
+    width: 45%;
+    height: 800px;
+    right: 0;
+    border: 1px solid #000;
+    border-right: none;
+  }
+  &__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    padding: 40px 100px;
+    margin-bottom: 90px;
+  }
+  &__adress {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+    padding: 40px;
+    border: 1px solid #000;
+    position: relative;
+    margin-bottom: 90px;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/contacts/home.svg');
+      width: 40px;
+      height: 30px;
+    }
+  }
+  &__item{
+    padding-left: 50px;
+  }
+  &__links a{
+    display: block;
+    font-weight: 400;
+    font-size: 26px;
+    padding: 20px 80px 20px 140px;
+    border: 1px solid #000;
+  }
+  &__social{
+    margin-bottom: 90px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/contacts/instagram.svg');
+      width: 40px;
+      height: 35px;
+      left: 80px;
+    }
+  }
+  &__number{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/contacts/phone.svg');
+      width: 30px;
+      height: 28px;
+      left: 95px;
+      top: 25px;
+    }
+  }
+  &__map-img{
+    position: absolute;
+    width: 450px;
+    height: 630px;
+    right: 0;
+    top: 100px;
+  }
+}
+/*-----------------footer--------------------*/
+.footer{
+  background-color: $green;
+  margin-bottom: 60px;
+  &__text{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    padding: 30px;
+    border-bottom: 1px solid #000;
+  }
+}
+
+
+@import 'media';

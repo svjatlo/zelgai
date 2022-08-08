@@ -1,0 +1,70 @@
+html,
+body {
+	height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: #000;
+  position: relative;
+}
+
+.wrapper{
+  background-color: #F7FFE5;
+}
+
+.title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;  
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+.arrow{
+  position: relative;
+  &::after{
+    content: '';
+    position: fixed;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 20px;
+    height: 35px;
+    bottom: 50px;
+    right: 50px;
+    padding: 20px;
+  }
+}
+
+
+
+
+
